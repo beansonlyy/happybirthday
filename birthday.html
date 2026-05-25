@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday 🎂</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #AC94F4, #7A64F2);
+    overflow: hidden;
+    color: white;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 48px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.message-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+img.snoopy {
+    width: 180px;
+    margin-top: 20px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% { transform: translateY(-20px); }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    animation: fall linear forwards;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+</style>
+</head>
+<body>
+
+<h1>Happy 21st Birthday! </h1>
+
+<img class="snoopy" src="https://clipground.com/images/snoopy-happy-birthday-clipart-4.jpg" alt="Snoopy">
+
+<div class="message-container">
+    I know things feel heavy right now, and it is okay to not be okay. I just want you to know that you are stronger than you think, and even on hard days, you are doing your best and that is more than enough.<br><br>
+    You matter so much more than you realize and I hope today reminds you of that. Take it slow, breathe, and remember that brighter moments are coming. I believe in you, and I am cheering for you every step of the way.<br><br>
+    Happy Birthday. You are not alone you are loved, you are important, and you can get through this.
+</div>
+
+<audio autoplay loop>
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/midi">
+</audio>
+
+<script>
+function confetti() {
+    for (let i = 0; i < 100; i++) {
+        let c = document.createElement("div");
+        c.className = "confetti";
+        c.style.left = Math.random() * window.innerWidth + "px";
+        c.style.backgroundColor = randomColor();
+        c.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        document.body.appendChild(c);
+        setTimeout(() => c.remove(), 5000);
+    }
+}
+
+function randomColor() {
+    const colors = ["#ff4d4d","#ffd11a","#3399ff","#33cc33","#b366ff"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+confetti();
+</script>
+
+</body>
+</html>

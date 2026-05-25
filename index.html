@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Snoopy Surprise 🐾</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#AC94F4,#8B6FE8);
+    padding:20px;
+}
+
+.card{
+    width:100%;
+    max-width:320px;
+    background:#fff;
+    border-radius:20px;
+    padding:25px 20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+img{
+    width:120px;
+    max-width:100%;
+    animation:float 2s infinite ease-in-out;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+h1{
+    color:#371F76;
+    font-size:24px;
+    margin:15px 0 10px;
+}
+
+p{
+    color:#555;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#AC94F4;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#8B6FE8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <img src="snoopy.jpg" alt="Snoopy">
+
+    <h1>Happy Birthday Aprilyn 🎂</h1>
+    <p>Smile before u open my message for u 💜</p>
+
+    <button onclick="goToMessage()">
+        View Message
+    </button>
+</div>
+
+<script>
+function goToMessage(){
+    window.location.href = "birthday.html";
+}
+</script>
+
+</body>
+</html>
